@@ -25,11 +25,8 @@ public class Processor2
         var segments = gameData.Split(';');
         int maxRed = 0, maxBlue = 0, maxGreen = 0;
 
-        for (int j = 0; j < segments.Length; j++)
-        {
-            foreach (var segment in segments)
-            {
-                var parts = segment.Split(new char[] { ',', ':' }, StringSplitOptions.RemoveEmptyEntries);
+
+        var parts = gameData.Split(new char[] {';',','},StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (var part in parts)
                 {
@@ -50,10 +47,7 @@ public class Processor2
                         }
                     }
                 }
-            }
-        }
         return maxRed * maxBlue * maxGreen;
     }
-
 
 }

@@ -26,13 +26,7 @@ public class Processor1
 
     public static bool BiggerThanLargestCount(string gameData, int red, int blue, int green)
     {
-        var segments = gameData.Split(';');
-
-        for (int j = 0; j < segments.Length; j++)
-        {
-            foreach (var segment in segments)
-            {
-                var parts = segment.Split(new char[] { ',', ':' }, StringSplitOptions.RemoveEmptyEntries);
+        var parts = gameData.Split(new char[] {';',','},StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (var part in parts)
                 {
@@ -62,9 +56,6 @@ public class Processor1
                         }
                     }
                 }
-            }
-        }
         return true;
     }
-
 }
