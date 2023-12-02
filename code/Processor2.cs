@@ -5,28 +5,25 @@ using System.Text.RegularExpressions;
 
 namespace code;
 
-public class Processor1
+public class Processor2
 {
-    public static long Process(string[] input, int red, int blue, int green)
+    public static long Process(string[] input)
     {
-        long sum = 0;
+        long power = 0;
         for (int i = 0; i < input.Length; i++)
         {
-            string gameData = input[i].Substring(input[i].IndexOf(':') + 1).Trim(); // Extracting the game data part
+            string gameData = input[i].Substring(input[i].IndexOf(':') + 1).Trim(); 
+            power = power + GetPowerOfMaxCount(gameData);
 
-            if (BiggerThanLargestCount(gameData, red,blue,green) )
-            {
-                sum = sum + 1 + i;
-            }                                 
         }
 
-        return sum;
+        return power;
 
     }
-
-    public static bool BiggerThanLargestCount(string gameData, int red, int blue, int green)
+    public static long GetPowerOfMaxCount(string gameData)
     {
         var segments = gameData.Split(';');
+        int maxRed = 0, maxBlue = 0, maxGreen = 0;
 
         for (int j = 0; j < segments.Length; j++)
         {
@@ -42,29 +39,21 @@ public class Processor1
                         switch (elements[1].ToLower())
                         {
                             case "red":
-                                if (count > red)
-                                {
-                                    return false;
-                                }
+                                maxRed = Math.Max(maxRed, count);
                                 break;
                             case "blue":
-                                if (count > blue)
-                                {
-                                    return false;
-                                }
+                                maxBlue = Math.Max(maxBlue, count);
                                 break;
                             case "green":
-                                if (count > green)
-                                {
-                                    return false;
-                                }
+                                maxGreen = Math.Max(maxGreen, count);
                                 break;
                         }
                     }
                 }
             }
         }
-        return true;
+        return maxRed * maxBlue * maxGreen;
     }
+
 
 }
