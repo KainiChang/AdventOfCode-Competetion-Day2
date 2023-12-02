@@ -39,16 +39,4 @@ public class InputHandler
         string[] rows = input.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
         return rows;
     }
-    // public static List<List<int>> ReadInputList(string input)
-    // {
-    //     // Split the input into rows
-    //     // Split the input into individual games
-    //     List<List<int>> allMaxCounts = new List<List<int>>();
-       
-
-    //     }
-
-
-    //     return allMaxCounts;
-    // }
 }

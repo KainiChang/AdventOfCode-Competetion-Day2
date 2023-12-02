@@ -1,9 +1,7 @@
 namespace code;
 
-// public class OutputHandler
-// {
-
-// // sum all heights and add the count of low points
+public class OutputHandler
+{
 //     public static int SumCustomised (List<int> lowPoints)
 //     {
 //         int sum = 0;
@@ -14,4 +12,4 @@ namespace code;
 //         }
 //         return sum;
 //     }
-// }
+}
