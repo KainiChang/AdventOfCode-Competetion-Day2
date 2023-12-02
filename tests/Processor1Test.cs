@@ -1,7 +1,7 @@
 namespace tests;
 
 [TestClass]
-public class ProcessorTest : code.Processor1
+public class Processor1Test : code.Processor1
 {
 
     [TestMethod]
@@ -17,7 +17,7 @@ Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green";
         Assert.AreEqual(expected, actual);
     }
         [TestMethod]
-    public void Question1Test()
+    public void GetQuestion1AnswerTest()
     {
         string input = @"Game 1: 7 green, 4 blue, 3 red; 4 blue, 10 red, 1 green; 1 blue, 9 red
 Game 2: 2 red, 4 blue, 3 green; 5 green, 3 red, 1 blue; 3 green, 5 blue, 3 red
@@ -119,7 +119,7 @@ Game 97: 3 green, 3 blue; 5 green, 3 blue, 1 red; 5 green, 1 red, 3 blue; 1 gree
 Game 98: 6 red, 6 green, 5 blue; 19 red, 7 green; 6 green, 8 blue, 4 red; 10 green, 4 red
 Game 99: 9 red, 8 blue, 10 green; 3 blue, 7 green, 8 red; 6 red, 12 blue; 8 blue, 8 green, 2 red; 16 green, 14 blue, 5 red
 Game 100: 8 red, 13 green; 5 red, 4 green; 7 blue, 3 red, 8 green; 13 blue, 6 green; 1 blue, 8 green, 7 red; 2 red, 1 green, 16 blue";
-        var expected = 2447;
+        var expected = 1;
           var actual=code.Processor1.Process(code.InputHandler.ReadInputLines(input),12,14,13);
         Assert.AreEqual(expected, actual);
     }

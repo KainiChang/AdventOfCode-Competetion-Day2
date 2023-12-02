@@ -17,7 +17,7 @@ Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green";
     Assert.AreEqual(expected, actual);
   }
   [TestMethod]
-  public void Question1Test()
+  public void GetQuestion2AnswerTest()
   {
     string input = @"Game 1: 7 green, 4 blue, 3 red; 4 blue, 10 red, 1 green; 1 blue, 9 red
 Game 2: 2 red, 4 blue, 3 green; 5 green, 3 red, 1 blue; 3 green, 5 blue, 3 red
