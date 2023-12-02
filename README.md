@@ -1,1 +1,2 @@
-# AdventOfCode-Competetion-Day2
+# AdventOfCode-Competetion-Day1
+https://adventofcode.com/
